@@ -1,7 +1,8 @@
-resource "aws_s3_bucket" "state_bucket" {
-  bucket = local.state_bucket_name
+resource "aws_s3_bucket" "s3_storage" {
+  for_each = toset(local.bucket_names)
+  bucket   = each.value
 
   tags = {
-    Name = local.state_bucket_name
+    Name = each.value
   }
 }

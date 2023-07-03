@@ -1,3 +1,3 @@
 locals {
-  state_bucket_name = "harness-state-bucket"
+  bucket_names = ["demo-artifacts-store"]
 }
