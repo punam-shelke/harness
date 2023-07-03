@@ -7,6 +7,12 @@ provider "aws" {
 }
 
 terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+
   backend "s3" {
     bucket = "demo-state-bucket"
     key    = "all-resource-state-file.tfstate"

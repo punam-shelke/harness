@@ -5,3 +5,7 @@ resource "aws_s3_bucket" "state_bucket" {
     Name = local.state_bucket_name
   }
 }
+
+provider "aws" {
+  region = local.region
+}
