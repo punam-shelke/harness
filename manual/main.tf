@@ -17,9 +17,6 @@ terraform {
     harness = {
       source = "harness/harness"
     }
-    aws = {
-      source = "hashicorp/aws"
-    }
   }
 
   backend "s3" {
